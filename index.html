@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaidehi Awasthi | Portfolio</title>
+    <meta name="description"
+        content="Personal portfolio of Vaidehi Awasthi, a Computer Science student interested in backend development, Django, and algorithms.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#8b5cf6', // Violet
+                        primaryHover: '#7c3aed',
+                        secondary: '#14b8a6', // Teal
+                        bgSoft: '#fafaf9', // Stone 50
+                        textMain: '#1c1917', // Stone 900
+                        textMuted: '#57534e', // Stone 500
+                        accent: '#e7e5e4', // Stone 200
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for a polished look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #fafaf9;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #d6d3d1;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a8a29e;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-bgSoft text-textMain font-sans antialiased selection:bg-primary/20 selection:text-primaryHover leading-relaxed relative">
+
+    <!-- Ambient Background Gradients -->
+    <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+        <div class="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-primary/5 blur-[120px]"></div>
+        <div class="absolute top-[20%] -right-[10%] w-[40%] h-[40%] rounded-full bg-secondary/5 blur-[100px]"></div>
+        <div class="absolute -bottom-[20%] left-[20%] w-[60%] h-[60%] rounded-full bg-primary/5 blur-[120px]"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-bgSoft/80 backdrop-blur-xl border-b border-accent/50">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center relative z-10">
+            <a href="#" class="font-heading text-xl font-extrabold tracking-tight text-textMain">VA<span
+                    class="text-primary">.</span></a>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-textMuted">
+                <a href="#projects" class="hover:text-primary transition-colors">Projects</a>
+                <a href="#algorithms" class="hover:text-primary transition-colors">Algorithms</a>
+                <a href="#skills" class="hover:text-primary transition-colors">Skills</a>
+                <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+            </div>
+            <!-- Mobile Menu Placeholder -->
+            <div class="md:hidden text-primary font-heading font-bold text-sm bg-primary/10 px-4 py-2 rounded-full">
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto px-6 pb-24 relative z-10">
+
+        <!-- 1. Hero Section -->
+        <section id="hero" class="py-16 md:py-24 max-w-3xl">
+            <h1
+                class="font-heading text-5xl md:text-7xl font-extrabold tracking-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary to-secondary drop-shadow-sm">
+                Vaidehi Awasthi
+            </h1>
+            <p class="text-lg md:text-xl text-textMuted mb-8 leading-relaxed max-w-2xl">
+                Computer Science student interested in <span
+                    class="text-textMain font-semibold border-b-2 border-primary/30 pb-0.5">backend development</span>,
+                Django, and algorithms. Building scalable logic and clean code.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="https://github.com/s-k-y-7" target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center px-6 py-2.5 rounded-full text-white bg-textMain hover:bg-black transition-all font-medium shadow-lg hover:shadow-xl hover:-translate-y-0.5 duration-300">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z">
+                        </path>
+                    </svg>
+                    GitHub
+                </a>
+                <a href="assets/VaidehiAwasthiResumeMainPublic.pdf" download
+                    class="inline-flex items-center justify-center px-6 py-2.5 border border-accent rounded-full text-textMain bg-white hover:border-primary hover:text-primary transition-all font-medium shadow-sm hover:shadow-md hover:-translate-y-0.5 duration-300">
+                    Resume
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. Projects Section -->
+        <section id="projects" class="py-12">
+            <div class="flex items-center gap-4 mb-8">
+                <h2 class="font-heading text-3xl font-bold">Projects</h2>
+                <div class="h-px bg-accent flex-grow mt-2"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Project 1 -->
+                <div
+                    class="group bg-white rounded-2xl p-6 border border-accent/60 shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300 flex flex-col h-full relative overflow-hidden">
+                    <div
+                        class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-2 group-hover:text-primary transition-colors">LofiType
+                    </h3>
+                    <p class="text-sm font-medium text-secondary mb-3">Java • JavaFX • FXML • Desktop Application</p>
+                    <p class="text-textMuted mb-6 flex-grow text-sm leading-relaxed">
+                        A desktop typing speed test built with JavaFX that measures typing speed and accuracy in real time. The application highlights correct and incorrect characters, tracks a timed test session, and calculates WPM and accuracy at the end of the test.
+                    </p>
+                    <div class="flex flex-wrap gap-3 mt-auto pt-4 border-t border-accent/50">
+                        <a href="https://github.com/s-k-y-7/LofiType" target="_blank" rel="noopener noreferrer"
+                            class="text-sm font-semibold text-textMain hover:text-primary transition-colors flex items-center gap-1">
+                            GitHub <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div
+                    class="group bg-white rounded-2xl p-6 border border-accent/60 shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300 flex flex-col h-full relative overflow-hidden">
+                    <div
+                        class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-2 group-hover:text-primary transition-colors">Saaf – Community Cleanliness Platform</h3>
+                    <p class="text-sm font-medium text-secondary mb-3">Django • Tailwind CSS • JavaScript • Gemini API</p>
+                    <p class="text-textMuted mb-6 flex-grow text-sm leading-relaxed">
+                        A community-driven web platform that helps citizens organize neighborhood clean-up initiatives. Users can create clean-up invitations, coordinate volunteer drives, and discover nearby events using browser geolocation. The platform also includes an optional AI-powered motivation story enhancer using the Gemini API.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mt-auto pt-4 border-t border-accent/50">
+                        <a href="https://sky7.pythonanywhere.com/saaf/posts/" target="_blank" rel="noopener noreferrer"
+                            class="text-sm font-semibold text-textMain hover:text-primary transition-colors flex items-center gap-1">
+                            Live Demo <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/s-k-y-7/community_cleanliness_project_saaf" target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-sm font-semibold text-textMain hover:text-primary transition-colors flex items-center gap-1">
+                            GitHub <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div
+                    class="group bg-white rounded-2xl p-6 border border-accent/60 shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300 flex flex-col h-full relative overflow-hidden">
+                    <div
+                        class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="flex items-start justify-between mb-2">
+                        <h3 class="font-heading text-xl font-bold group-hover:text-primary transition-colors">Product Intelligence & Validation Platform</h3>
+                        <span
+                            class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 bg-amber-100 text-amber-700 rounded-md">WIP</span>
+                    </div>
+                    <p class="text-sm font-medium text-secondary mb-3">Django REST Framework • PostgreSQL • Redis • React • AI APIs</p>
+                    <p class="text-textMuted mb-6 flex-grow text-sm leading-relaxed">
+                        A backend-focused system that aggregates product data from multiple sources and generates structured product intelligence reports using AI-based analysis. The project focuses on scalable backend architecture with APIs, background workers, and data processing pipelines.
+                    </p>
+                    <div class="flex flex-wrap gap-3 mt-auto pt-4 border-t border-accent/50">
+                        <a href="https://github.com/s-k-y-7/product-intelligence-system" target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-sm font-semibold text-textMain hover:text-primary transition-colors flex items-center gap-1">
+                            GitHub <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 3. Algorithms Section -->
+        <section id="algorithms" class="py-12">
+            <div class="bg-textMain rounded-3xl p-8 md:p-12 relative overflow-hidden shadow-2xl text-white">
+                <!-- Abstract dark background elements -->
+                <div class="absolute top-0 right-0 w-64 h-64 bg-primary/30 rounded-full blur-[80px] mix-blend-screen">
+                </div>
+                <div
+                    class="absolute -bottom-20 -left-20 w-64 h-64 bg-secondary/30 rounded-full blur-[80px] mix-blend-screen">
+                </div>
+
+                <div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-8">
+                    <div class="max-w-xl">
+                        <h2 class="font-heading text-3xl font-bold mb-4">Algorithmic Problem Solving</h2>
+                        <p class="text-stone-300 text-sm md:text-base leading-relaxed mb-6">
+                            Solved <span class="text-white font-semibold">200+</span> algorithmic problems focusing on
+                            graphs, trees, and problem decomposition. Consistent practice in applying optimal data
+                            structures and backend logic.
+                        </p>
+                    </div>
+                    <div class="shrink-0 relative">
+                        <!-- Glassmorphic button effect -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-full blur opacity-50">
+                        </div>
+                        <a href="https://leetcode.com/u/_sk_y/" target="_blank" rel="noopener noreferrer"
+                            class="relative bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-md text-white px-6 py-3 rounded-full font-medium transition-all flex items-center gap-2 group">
+                            View LeetCode
+                            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Skills Section -->
+        <section id="skills" class="py-12 mb-8">
+            <div class="flex items-center gap-4 mb-8">
+                <h2 class="font-heading text-3xl font-bold">Skills & Tools</h2>
+                <div class="h-px bg-accent flex-grow mt-2"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Category -->
+                <div class="bg-white/50 p-5 rounded-2xl border border-accent/50">
+                    <h3 class="font-heading text-sm font-bold uppercase tracking-wider text-textMuted mb-4">Languages
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-3 py-1.5 bg-white border border-accent rounded-xl text-sm font-medium text-textMain shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">C++</span>
+                        <span
+                            class="px-3 py-1.5 bg-white border border-accent rounded-xl text-sm font-medium text-textMain shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">Python</span>
+                        <span
+                            class="px-3 py-1.5 bg-white border border-accent rounded-xl text-sm font-medium text-textMain shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">Java</span>
+                    </div>
+                </div>
+                <!-- Category -->
+                <div class="bg-white/50 p-5 rounded-2xl border border-accent/50">
+                    <h3 class="font-heading text-sm font-bold uppercase tracking-wider text-textMuted mb-4">Frameworks
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-3 py-1.5 bg-white border border-accent rounded-xl text-sm font-medium text-textMain shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">Django</span>
+                    </div>
+                </div>
+                <!-- Category -->
+                <div class="bg-white/50 p-5 rounded-2xl border border-accent/50">
+                    <h3 class="font-heading text-sm font-bold uppercase tracking-wider text-textMuted mb-4">Concepts
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-3 py-1.5 bg-white border border-accent rounded-xl text-sm font-medium text-textMain shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">Data
+                            Structures</span>
+                        <span
+                            class="px-3 py-1.5 bg-white border border-accent rounded-xl text-sm font-medium text-textMain shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">Algorithms</span>
+                        <span
+                            class="px-3 py-1.5 bg-white border border-accent rounded-xl text-sm font-medium text-textMain shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">Backend
+                            Web</span>
+                    </div>
+                </div>
+                <!-- Category -->
+                <div class="bg-white/50 p-5 rounded-2xl border border-accent/50">
+                    <h3 class="font-heading text-sm font-bold uppercase tracking-wider text-textMuted mb-4">Tools</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-3 py-1.5 bg-white border border-accent rounded-xl text-sm font-medium text-textMain shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">Git</span>
+                        <span
+                            class="px-3 py-1.5 bg-white border border-accent rounded-xl text-sm font-medium text-textMain shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">SQL</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 6. Contact & Footer -->
+    <footer id="contact"
+        class="bg-textMain text-stone-400 py-12 relative z-10 mt-12 rounded-t-3xl border-t border-accent max-w-6xl mx-auto">
+        <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+
+            <div class="text-center md:text-left">
+                <a href="#" class="font-heading text-2xl font-extrabold tracking-tight text-white mb-2 block">VA<span
+                        class="text-primary">.</span></a>
+                <p class="text-sm">Building clean logic & modern backends.</p>
+            </div>
+
+            <div class="flex gap-4">
+                <a href="mailto:vaidehiawasthi07@gmail.com?subject=Hello%20Vaidehi&body=I%20saw%20your%20portfolio."
+                    class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-all duration-300"
+                    aria-label="Email">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="https://github.com/s-k-y-7/" target="_blank" rel="noopener noreferrer"
+                    class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-all duration-300"
+                    aria-label="GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/vaidehi-awasthi-034702272/" target="_blank"
+                    rel="noopener noreferrer"
+                    class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-all duration-300"
+                    aria-label="LinkedIn">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
